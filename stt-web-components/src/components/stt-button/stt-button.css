@@ -1,0 +1,23 @@
+:host {
+  display: inline-flex;
+  align-items: center;
+  background-color: bisque;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+:host(:hover) {
+  background-color: #000;
+  border-radius: 5px;
+  color: #fff;
+}
+
+:host(.medium) {
+  padding: 10px;
+  border: 1px solid #f00;
+}
+
+:host(.small) {
+  padding: 4px;
+  border: 1px solid #00f;
+}
