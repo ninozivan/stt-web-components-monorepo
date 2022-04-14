@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'stt-button',
@@ -6,9 +6,18 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class SttButton {
+  @Prop() size: string;
+  @Prop() color: string;
+
+  classes: string;
+
+  componentWillRender(){
+    this.classes = `${this.size} ${this.color} xxxx`
+  }
+
   render() {
     return (
-      <Host>
+      <Host class={this.classes}>
         <slot></slot>
       </Host>
     );

@@ -21,6 +21,8 @@ export namespace Components {
         "middle": string;
     }
     interface SttButton {
+        "color": string;
+        "size": string;
     }
 }
 declare global {
@@ -57,6 +59,8 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface SttButton {
+        "color"?: string;
+        "size"?: string;
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
