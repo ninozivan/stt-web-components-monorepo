@@ -11,8 +11,8 @@ export class SttButton {
 
   classes: string;
 
-  componentWillRender(){
-    this.classes = `${this.size} ${this.color} xxxx`
+  componentWillRender() {
+    this.classes = `${this.size} ${this.color} xxxx`;
   }
 
   render() {

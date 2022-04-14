@@ -1,36 +1,37 @@
-$var-color-pink: rgb(238, 117, 238);
-
 :host {
   display: inline-flex;
   align-items: center;
-  background-color: $var-color-pink;
+  background-color: var(--color-dark, #f0f);
   color: #fff;
   cursor: pointer;
   transition: 0.3s;
-  padding: 10x;
+  padding: var(--padding-medium);
   border-radius: 5px;
 }
 
-:host(.medium) {
-  padding: 10px;
-}
-
-:host(.small) {
-  padding: 4px;
-}
-
-:host(.large) {
-  padding: 15px;
-}
-
 :host(.blue) {
-  background-color: #00f;
+  background-color: var(--color-blue);
 }
 
 :host(.red) {
-  background-color: #f00;
+  background-color: var(--color-red);
 }
 
 :host(.green) {
-  background-color: #0f0;
+  background-color: var(--color-green);
+}
+
+:host(.small) {
+  padding: var(--padding-small);
+  font-size: var(--font-size-small);
+}
+
+:host(.medium) {
+  padding: var(--padding-medium);
+  font-size: var(--font-size-medium);
+}
+
+:host(.large) {
+  padding: var(--padding-large);
+  font-size: var(--font-size-large);
 }
