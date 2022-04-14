@@ -1,7 +1,9 @@
+$var-color-pink: rgb(238, 117, 238);
+
 :host {
   display: inline-flex;
   align-items: center;
-  background-color: #000;
+  background-color: $var-color-pink;
   color: #fff;
   cursor: pointer;
   transition: 0.3s;

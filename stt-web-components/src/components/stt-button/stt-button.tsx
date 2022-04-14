@@ -2,7 +2,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'stt-button',
-  styleUrl: 'stt-button.css',
+  styleUrl: 'stt-button.scss',
   shadow: true,
 })
 export class SttButton {
