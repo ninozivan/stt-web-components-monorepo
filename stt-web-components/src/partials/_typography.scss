@@ -1,0 +1,23 @@
+h1,
+h2,
+h3,
+h4 {
+  color: #f00;
+}
+
+h5,
+h6 {
+  color: #f00;
+}
+
+p {
+  color: green;
+}
+
+:host {
+  --border-color-blue: #00f;
+}
+
+:root {
+  --border-color-red: #f00;
+}

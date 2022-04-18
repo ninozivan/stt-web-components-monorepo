@@ -25,6 +25,6 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
-  globalStyle: 'src/global/variables.scss',
+  globalStyle: 'src/global/global.scss',
   plugins: [sass()],
 };
