@@ -22,6 +22,8 @@ export namespace Components {
     }
     interface SttButton {
         "color": string;
+        "corners": boolean;
+        "shape": string;
         "size": string;
     }
 }
@@ -60,6 +62,8 @@ declare namespace LocalJSX {
     }
     interface SttButton {
         "color"?: string;
+        "corners"?: boolean;
+        "shape"?: string;
         "size"?: string;
     }
     interface IntrinsicElements {

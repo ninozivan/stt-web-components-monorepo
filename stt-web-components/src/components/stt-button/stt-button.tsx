@@ -8,11 +8,13 @@ import { Component, Host, h, Prop } from '@stencil/core';
 export class SttButton {
   @Prop() size: string;
   @Prop() color: string;
+  @Prop() shape: string;
+  @Prop() corners: boolean;
 
   classes: string;
 
   componentWillRender() {
-    this.classes = `${this.size} ${this.color} xxxx`;
+    this.classes = `${this.size || ''} ${this.color || ''} ${this.shape || ''} ${this.corners ? 'corners' : ''} 1-2`;
   }
 
   render() {

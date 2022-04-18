@@ -1,37 +1,193 @@
+@import '../../partials/typography.scss';
+@import '../../partials/variables.scss';
+
 :host {
+  font-family: Arial, Helvetica, sans-serif;
   display: inline-flex;
   align-items: center;
-  background-color: var(--color-dark, #f0f);
-  color: #fff;
+  justify-content: center;
+  background-color: $color-dark;
+  color: $color-dark-contrast;
   cursor: pointer;
   transition: 0.3s;
-  padding: var(--padding-medium);
-  border-radius: 5px;
+  border-radius: $radius-medium;
+  height: $height-medium;
+  font-size: $font-size-medium;
+  box-sizing: border-box;
+  width: auto;
+}
+
+:host(.dark) {
+  background-color: $color-dark;
+  color: $color-dark-contrast;
+}
+
+:host(.gray) {
+  background-color: $color-gray;
+  color: $color-gray-contrast;
+}
+
+:host(.light) {
+  background-color: $color-light;
+  color: $color-light-contrast;
 }
 
 :host(.blue) {
-  background-color: var(--color-blue);
+  background-color: $color-blue;
+  color: $color-blue-contrast;
 }
 
 :host(.red) {
-  background-color: var(--color-red);
+  background-color: $color-red;
+  color: $color-red-contrast;
 }
 
 :host(.green) {
-  background-color: var(--color-green);
+  background-color: $color-green;
+  color: $color-green-contrast;
+}
+
+:host(.orange) {
+  background-color: $color-orange;
+  color: $color-orange-contrast;
+}
+
+:host(.extra-small) {
+  border-radius: $radius-extra-small;
+  height: $height-extra-small;
+  font-size: $font-size-extra-small;
+  padding: $spacing-extra-small $spacing-extra-small * 2;
+}
+
+:host(.extra-small.circle) {
+  border-radius: 50%;
+  height: $height-extra-small;
+  width: $height-extra-small;
+  max-height: $height-extra-small;
+  max-width: $height-extra-small;
+  overflow: hidden;
+}
+
+:host(.extra-small.square) {
+  border-radius: 0;
+  height: $height-extra-small;
+  width: $height-extra-small;
+  max-height: $height-extra-small;
+  max-width: $height-extra-small;
+  overflow: hidden;
 }
 
 :host(.small) {
-  padding: var(--padding-small);
-  font-size: var(--font-size-small);
+  border-radius: $radius-small;
+  height: $height-small;
+  font-size: $font-size-small;
+  padding: $spacing-small $spacing-small * 2;
+}
+
+:host(.small.circle) {
+  border-radius: 50%;
+  height: $height-small;
+  width: $height-small;
+  max-height: $height-small;
+  max-width: $height-small;
+  overflow: hidden;
+}
+
+:host(.small.square) {
+  border-radius: 0;
+  height: $height-small;
+  width: $height-small;
+  max-height: $height-small;
+  max-width: $height-small;
+  overflow: hidden;
 }
 
 :host(.medium) {
-  padding: var(--padding-medium);
-  font-size: var(--font-size-medium);
+  border-radius: $radius-medium;
+  height: $height-medium;
+  font-size: $font-size-medium;
+  padding: $spacing-medium $spacing-medium * 2;
+}
+
+:host(.circle) {
+  border-radius: 50%;
+  height: $height-medium;
+  width: $height-medium;
+  max-height: $height-medium;
+  max-width: $height-medium;
+  overflow: hidden;
+}
+
+:host(.square) {
+  border-radius: 0;
+  height: $height-medium;
+  width: $height-medium;
+  max-height: $height-medium;
+  max-width: $height-medium;
+  overflow: hidden;
 }
 
 :host(.large) {
-  padding: var(--padding-large);
-  font-size: var(--font-size-large);
+  border-radius: $radius-large;
+  height: $height-large;
+  font-size: $font-size-large;
+  padding: $spacing-large $spacing-large * 2;
+}
+
+:host(.large.circle) {
+  border-radius: 50%;
+  height: $height-large;
+  width: $height-large;
+  max-height: $height-large;
+  max-width: $height-large;
+  overflow: hidden;
+}
+
+:host(.large.square) {
+  border-radius: 0;
+  height: $height-large;
+  width: $height-large;
+  max-height: $height-large;
+  max-width: $height-large;
+  overflow: hidden;
+}
+
+:host(.extra-large) {
+  border-radius: $radius-extra-large;
+  height: $height-extra-large;
+  font-size: $font-size-extra-large;
+  padding: $spacing-extra-large $spacing-extra-large * 2;
+}
+
+:host(.extra-large.circle) {
+  border-radius: 50%;
+  height: $height-extra-large;
+  width: $height-extra-large;
+  max-height: $height-extra-large;
+  max-width: $height-extra-large;
+  overflow: hidden;
+}
+
+:host(.extra-large.square) {
+  border-radius: 0;
+  height: $height-extra-large;
+  width: $height-extra-large;
+  max-height: $height-extra-large;
+  max-width: $height-extra-large;
+  overflow: hidden;
+}
+
+:host(.block) {
+  width: 100%;
+}
+
+:host(.corners) {
+  border-radius: 0 !important;
+}
+
+// Button Hover
+@media (any-hover: hover) {
+  :host(:hover) {
+    opacity: 0.8;
+  }
 }
