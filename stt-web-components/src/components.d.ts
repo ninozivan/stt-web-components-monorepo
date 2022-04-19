@@ -26,6 +26,33 @@ export namespace Components {
         "shape": 'default' | 'block' | 'square' | 'circle';
         "size": 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large';
     }
+    interface SttTextarea {
+        /**
+          * If `true`, the element height will increase based on the value.
+         */
+        "autoGrow": boolean;
+        /**
+          * The visible width of the text control, in average character widths. If it is specified, it must be a positive integer.
+         */
+        "cols"?: number;
+        "corners": 'all' | 'left' | 'right' | 'top' | 'bottom';
+        /**
+          * Set the amount of time, in milliseconds, to wait to trigger the `ionChange` event after each keystroke. This also impacts form bindings such as `ngModel` or `v-model`.
+         */
+        "debounce": number;
+        /**
+          * Instructional text that shows before the input has a value.
+         */
+        "placeholder"?: string;
+        /**
+          * The number of visible text lines for the control.
+         */
+        "rows"?: number;
+        /**
+          * The value of the textarea.
+         */
+        "value"?: string | null;
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -40,9 +67,16 @@ declare global {
         prototype: HTMLSttButtonElement;
         new (): HTMLSttButtonElement;
     };
+    interface HTMLSttTextareaElement extends Components.SttTextarea, HTMLStencilElement {
+    }
+    var HTMLSttTextareaElement: {
+        prototype: HTMLSttTextareaElement;
+        new (): HTMLSttTextareaElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "stt-button": HTMLSttButtonElement;
+        "stt-textarea": HTMLSttTextareaElement;
     }
 }
 declare namespace LocalJSX {
@@ -66,9 +100,41 @@ declare namespace LocalJSX {
         "shape"?: 'default' | 'block' | 'square' | 'circle';
         "size"?: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large';
     }
+    interface SttTextarea {
+        /**
+          * If `true`, the element height will increase based on the value.
+         */
+        "autoGrow"?: boolean;
+        /**
+          * The visible width of the text control, in average character widths. If it is specified, it must be a positive integer.
+         */
+        "cols"?: number;
+        "corners"?: 'all' | 'left' | 'right' | 'top' | 'bottom';
+        /**
+          * Set the amount of time, in milliseconds, to wait to trigger the `ionChange` event after each keystroke. This also impacts form bindings such as `ngModel` or `v-model`.
+         */
+        "debounce"?: number;
+        /**
+          * Emitted when a keyboard input occurred.
+         */
+        "onValueChanged"?: (event: CustomEvent<any>) => void;
+        /**
+          * Instructional text that shows before the input has a value.
+         */
+        "placeholder"?: string;
+        /**
+          * The number of visible text lines for the control.
+         */
+        "rows"?: number;
+        /**
+          * The value of the textarea.
+         */
+        "value"?: string | null;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "stt-button": SttButton;
+        "stt-textarea": SttTextarea;
     }
 }
 export { LocalJSX as JSX };
@@ -77,6 +143,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "stt-button": LocalJSX.SttButton & JSXBase.HTMLAttributes<HTMLSttButtonElement>;
+            "stt-textarea": LocalJSX.SttTextarea & JSXBase.HTMLAttributes<HTMLSttTextareaElement>;
         }
     }
 }

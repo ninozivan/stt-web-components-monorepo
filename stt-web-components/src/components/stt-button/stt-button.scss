@@ -2,14 +2,14 @@
 @import '../../css/partials/variables.scss';
 
 :host {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--base-font-family);
+  font-size: $font-size-medium;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   width: auto;
   text-align: center;
-  font-size: $font-size-medium;
   cursor: pointer;
   transition: 0.3s;
   background-color: $color-dark;

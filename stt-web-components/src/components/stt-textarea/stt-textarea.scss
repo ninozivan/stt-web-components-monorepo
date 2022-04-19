@@ -1,0 +1,79 @@
+@import '../../css/partials/typography.scss';
+@import '../../css/partials/variables.scss';
+
+:host {
+  display: block;
+  position: relative;
+
+  flex: 1;
+
+  width: 100%;
+
+  font-family: var(--base-font-family);
+
+  white-space: pre-wrap;
+
+  box-sizing: border-box;
+}
+
+.native-textarea {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  padding: $spacing-medium;
+
+  border: 0;
+
+  outline: none;
+
+  background: transparent;
+  box-sizing: border-box;
+  resize: none;
+  appearance: none;
+
+  transition: 0.3s;
+  color: $color-dark;
+  border-radius: $radius-medium;
+  border: 1px solid $color-dark;
+
+  &::placeholder {
+    padding: 0;
+    color: $color-gray;
+
+    font-family: inherit;
+  }
+
+  &:focus-visible,
+  &:focus {
+    border-color: $color-blue;
+    outline: 1px solid $color-blue;
+  }
+
+  &.corners {
+    &-all {
+      border-radius: 0;
+    }
+
+    &-left {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &-right {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &-bottom {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &-top {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+}
