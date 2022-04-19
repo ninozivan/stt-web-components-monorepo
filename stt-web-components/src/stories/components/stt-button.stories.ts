@@ -3,11 +3,11 @@ export default {
   title: 'Components/SttButton',
   argTypes: {
     size: {
-      options: ['extra-small', 'small', 'medium', 'large', 'extra-large'],
+      options: ['default', 'extra-small', 'small', 'medium', 'large', 'extra-large'],
       control: { type: 'select' },
     },
     color: {
-      options: ['dark', 'gray', 'light', 'blue', 'red', 'green', 'orange'],
+      options: ['default', 'dark', 'gray', 'light', 'blue', 'red', 'green', 'orange'],
       control: { type: 'select' },
     },
     shape: {
@@ -15,7 +15,8 @@ export default {
       control: { type: 'select' },
     },
     corners: {
-      control: 'boolean',
+      options: ['default', 'all', 'top', 'right', 'bottom', 'left'],
+      control: { type: 'select' },
     },
   },
 };
@@ -26,7 +27,7 @@ export const Example = Template.bind({});
 Example.args = {
   size: 'medium',
   color: 'blue',
-  shape: 'block',
-  corners: false,
+  shape: 'default',
+  corners: '',
   content: 'Button',
 };

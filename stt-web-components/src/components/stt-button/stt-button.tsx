@@ -6,15 +6,15 @@ import { Component, Host, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class SttButton {
-  @Prop() size: string;
-  @Prop() color: string;
-  @Prop() shape: string;
-  @Prop() corners: boolean;
+  @Prop() size: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large';
+  @Prop() color: 'dark' | 'gray' | 'light' | 'red' | 'green' | 'blue' | 'orange';
+  @Prop() shape: 'default' | 'block' | 'square' | 'circle';
+  @Prop() corners: 'all' | 'left' | 'right' | 'top' | 'bottom';
 
   classes: string;
 
   componentWillRender() {
-    this.classes = `${this.size || ''} ${this.color || ''} ${this.shape || ''} ${this.corners ? 'corners' : ''} 1-2`;
+    this.classes = `${this.size || ''} ${this.color || ''} ${this.shape || ''} ${this.corners ? `corners-${this.corners}` : ''} 1-6`;
   }
 
   render() {

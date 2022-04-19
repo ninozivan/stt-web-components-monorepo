@@ -21,10 +21,10 @@ export namespace Components {
         "middle": string;
     }
     interface SttButton {
-        "color": string;
-        "corners": boolean;
-        "shape": string;
-        "size": string;
+        "color": 'dark' | 'gray' | 'light' | 'red' | 'green' | 'blue' | 'orange';
+        "corners": 'all' | 'left' | 'right' | 'top' | 'bottom';
+        "shape": 'default' | 'block' | 'square' | 'circle';
+        "size": 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large';
     }
 }
 declare global {
@@ -61,10 +61,10 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface SttButton {
-        "color"?: string;
-        "corners"?: boolean;
-        "shape"?: string;
-        "size"?: string;
+        "color"?: 'dark' | 'gray' | 'light' | 'red' | 'green' | 'blue' | 'orange';
+        "corners"?: 'all' | 'left' | 'right' | 'top' | 'bottom';
+        "shape"?: 'default' | 'block' | 'square' | 'circle';
+        "size"?: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large';
     }
     interface IntrinsicElements {
         "my-component": MyComponent;

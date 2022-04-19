@@ -1,20 +1,21 @@
-@import '../../partials/typography.scss';
-@import '../../partials/variables.scss';
+@import '../../css/partials/typography.scss';
+@import '../../css/partials/variables.scss';
 
 :host {
   font-family: Arial, Helvetica, sans-serif;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: $color-dark;
-  color: $color-dark-contrast;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: $radius-medium;
-  height: $height-medium;
-  font-size: $font-size-medium;
   box-sizing: border-box;
   width: auto;
+  text-align: center;
+  font-size: $font-size-medium;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: $color-dark;
+  color: $color-dark-contrast;
+  border-radius: $radius-medium;
+  height: $height-medium;
 }
 
 :host(.dark) {
@@ -116,6 +117,7 @@
   max-height: $height-medium;
   max-width: $height-medium;
   overflow: hidden;
+  padding: 0;
 }
 
 :host(.square) {
@@ -125,6 +127,7 @@
   max-height: $height-medium;
   max-width: $height-medium;
   overflow: hidden;
+  padding: 0;
 }
 
 :host(.large) {
@@ -164,7 +167,7 @@
   height: $height-extra-large;
   width: $height-extra-large;
   max-height: $height-extra-large;
-  max-width: $height-extra-large;
+  max-width: $height-extra-large !important;
   overflow: hidden;
 }
 
@@ -181,8 +184,28 @@
   width: 100%;
 }
 
-:host(.corners) {
-  border-radius: 0 !important;
+:host(.corners-all) {
+  border-radius: 0;
+}
+
+:host(.corners-left) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+:host(.corners-right) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+:host(.corners-bottom) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+:host(.corners-top) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 // Button Hover
