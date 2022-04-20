@@ -26,6 +26,12 @@ export namespace Components {
         "shape": 'default' | 'block' | 'square' | 'circle';
         "size": 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large';
     }
+    interface SttCheckbox {
+        "color": 'dark' | 'gray' | 'light' | 'red' | 'green' | 'blue' | 'orange';
+        "corners": 'all' | 'left' | 'right' | 'top' | 'bottom';
+        "shape": 'default' | 'circle';
+        "size": 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large';
+    }
     interface SttTextarea {
         /**
           * If `true`, the element height will increase based on the value.
@@ -67,6 +73,12 @@ declare global {
         prototype: HTMLSttButtonElement;
         new (): HTMLSttButtonElement;
     };
+    interface HTMLSttCheckboxElement extends Components.SttCheckbox, HTMLStencilElement {
+    }
+    var HTMLSttCheckboxElement: {
+        prototype: HTMLSttCheckboxElement;
+        new (): HTMLSttCheckboxElement;
+    };
     interface HTMLSttTextareaElement extends Components.SttTextarea, HTMLStencilElement {
     }
     var HTMLSttTextareaElement: {
@@ -76,6 +88,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "stt-button": HTMLSttButtonElement;
+        "stt-checkbox": HTMLSttCheckboxElement;
         "stt-textarea": HTMLSttTextareaElement;
     }
 }
@@ -98,6 +111,12 @@ declare namespace LocalJSX {
         "color"?: 'dark' | 'gray' | 'light' | 'red' | 'green' | 'blue' | 'orange';
         "corners"?: 'all' | 'left' | 'right' | 'top' | 'bottom';
         "shape"?: 'default' | 'block' | 'square' | 'circle';
+        "size"?: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large';
+    }
+    interface SttCheckbox {
+        "color"?: 'dark' | 'gray' | 'light' | 'red' | 'green' | 'blue' | 'orange';
+        "corners"?: 'all' | 'left' | 'right' | 'top' | 'bottom';
+        "shape"?: 'default' | 'circle';
         "size"?: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large';
     }
     interface SttTextarea {
@@ -134,6 +153,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "my-component": MyComponent;
         "stt-button": SttButton;
+        "stt-checkbox": SttCheckbox;
         "stt-textarea": SttTextarea;
     }
 }
@@ -143,6 +163,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "stt-button": LocalJSX.SttButton & JSXBase.HTMLAttributes<HTMLSttButtonElement>;
+            "stt-checkbox": LocalJSX.SttCheckbox & JSXBase.HTMLAttributes<HTMLSttCheckboxElement>;
             "stt-textarea": LocalJSX.SttTextarea & JSXBase.HTMLAttributes<HTMLSttTextareaElement>;
         }
     }

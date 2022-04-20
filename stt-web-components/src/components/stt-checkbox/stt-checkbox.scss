@@ -1,0 +1,182 @@
+@import '../../css/partials/typography.scss';
+@import '../../css/partials/variables.scss';
+
+:host {
+  font-size: $font-size-medium;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: auto;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: $color-dark;
+  color: $color-dark-contrast;
+
+  height: $height-medium;
+  width: $height-medium;
+  max-height: $height-medium;
+  max-width: $height-medium;
+  overflow: hidden;
+  border-radius: $radius-medium;
+  padding: 0;
+
+  .checkbox-icon {
+    height: 60%;
+    fill: $color-dark-contrast;
+  }
+}
+
+:host(.dark) {
+  background-color: $color-dark;
+  color: $color-dark-contrast;
+
+  .checkbox-icon {
+    fill: $color-dark-contrast;
+  }
+}
+
+:host(.gray) {
+  background-color: $color-gray;
+  color: $color-gray-contrast;
+
+  .checkbox-icon {
+    fill: $color-gray-contrast;
+  }
+}
+
+:host(.light) {
+  background-color: $color-light;
+  color: $color-light-contrast;
+
+  .checkbox-icon {
+    fill: $color-light-contrast;
+  }
+}
+
+:host(.blue) {
+  background-color: $color-blue;
+  color: $color-blue-contrast;
+
+  .checkbox-icon {
+    fill: $color-blue-contrast;
+  }
+}
+
+:host(.red) {
+  background-color: $color-red;
+  color: $color-red-contrast;
+
+  .checkbox-icon {
+    fill: $color-red-contrast;
+  }
+}
+
+:host(.green) {
+  background-color: $color-green;
+  color: $color-green-contrast;
+
+  .checkbox-icon {
+    fill: $color-green-contrast;
+  }
+}
+
+:host(.orange) {
+  background-color: $color-orange;
+  color: $color-orange-contrast;
+
+  .checkbox-icon {
+    fill: $color-orange-contrast;
+  }
+}
+
+:host(.extra-small) {
+  border-radius: $radius-extra-small;
+  font-size: $font-size-extra-small;
+  height: $height-extra-small;
+  width: $height-extra-small;
+  max-height: $height-extra-small;
+  max-width: $height-extra-small;
+  overflow: hidden;
+  padding: 0;
+}
+
+:host(.small) {
+  border-radius: $radius-small;
+  font-size: $font-size-small;
+  height: $height-small;
+  width: $height-small;
+  max-height: $height-small;
+  max-width: $height-small;
+  overflow: hidden;
+  padding: 0;
+}
+
+:host(.medium) {
+  border-radius: $radius-medium;
+  font-size: $font-size-medium;
+  height: $height-medium;
+  width: $height-medium;
+  max-height: $height-medium;
+  max-width: $height-medium;
+  overflow: hidden;
+  padding: 0;
+}
+
+:host(.large) {
+  border-radius: $radius-large;
+  font-size: $font-size-large;
+  height: $height-large;
+  width: $height-large;
+  max-height: $height-large;
+  max-width: $height-large;
+  overflow: hidden;
+  padding: 0;
+}
+
+:host(.extra-large) {
+  border-radius: $radius-extra-large;
+  font-size: $font-size-extra-large;
+  height: $height-extra-large;
+  width: $height-extra-large;
+  max-height: $height-extra-large;
+  max-width: $height-extra-large;
+  overflow: hidden;
+  padding: 0;
+}
+
+:host(.circle) {
+  border-radius: 50%;
+}
+
+:host(.corners-all) {
+  border-radius: 0;
+}
+
+:host(.corners-left) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+:host(.corners-right) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+:host(.corners-bottom) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+:host(.corners-top) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+// Button Hover
+@media (any-hover: hover) {
+  :host(:hover) {
+    opacity: 0.8;
+  }
+}
