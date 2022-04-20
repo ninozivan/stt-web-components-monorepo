@@ -11,8 +11,9 @@
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
-  background-color: $color-dark;
-  color: $color-dark-contrast;
+  background-color: $color-light-tint;
+  color: $color-light-contrast;
+  border: 2px solid $color-light-shade;
 
   height: $height-medium;
   width: $height-medium;
@@ -23,68 +24,79 @@
   padding: 0;
 
   .checkbox-icon {
-    height: 60%;
-    fill: $color-dark-contrast;
+    height: 75%;
+    fill: $color-light-contrast;
   }
 }
 
 :host(.dark) {
+  border-color: $color-dark;
+}
+
+:host(.dark.checked) {
   background-color: $color-dark;
   color: $color-dark-contrast;
+  border-color: $color-dark;
 
   .checkbox-icon {
     fill: $color-dark-contrast;
   }
 }
 
-:host(.gray) {
+:host(.gray.checked) {
   background-color: $color-gray;
   color: $color-gray-contrast;
+  border-color: $color-gray;
 
   .checkbox-icon {
     fill: $color-gray-contrast;
   }
 }
 
-:host(.light) {
+:host(.light.checked) {
   background-color: $color-light;
   color: $color-light-contrast;
+  border-color: $color-light;
 
   .checkbox-icon {
     fill: $color-light-contrast;
   }
 }
 
-:host(.blue) {
+:host(.blue.checked) {
   background-color: $color-blue;
   color: $color-blue-contrast;
+  border-color: $color-blue;
 
   .checkbox-icon {
     fill: $color-blue-contrast;
   }
 }
 
-:host(.red) {
+:host(.red.checked) {
   background-color: $color-red;
   color: $color-red-contrast;
+  border-color: $color-red;
 
   .checkbox-icon {
     fill: $color-red-contrast;
   }
 }
 
-:host(.green) {
+:host(.green.checked) {
   background-color: $color-green;
   color: $color-green-contrast;
+  border-color: $color-green;
 
   .checkbox-icon {
     fill: $color-green-contrast;
   }
 }
 
-:host(.orange) {
+:host(.orange.checked) {
   background-color: $color-orange;
   color: $color-orange-contrast;
+  border-color: $color-orange;
 
   .checkbox-icon {
     fill: $color-orange-contrast;

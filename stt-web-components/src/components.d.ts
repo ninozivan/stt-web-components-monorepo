@@ -29,6 +29,8 @@ export namespace Components {
     interface SttCheckbox {
         "color": 'dark' | 'gray' | 'light' | 'red' | 'green' | 'blue' | 'orange';
         "corners": 'all' | 'left' | 'right' | 'top' | 'bottom';
+        "fill": 'default' | 'solid' | 'outline' | 'clear' | undefined;
+        "isChecked": boolean;
         "shape": 'default' | 'circle';
         "size": 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large';
     }
@@ -116,6 +118,9 @@ declare namespace LocalJSX {
     interface SttCheckbox {
         "color"?: 'dark' | 'gray' | 'light' | 'red' | 'green' | 'blue' | 'orange';
         "corners"?: 'all' | 'left' | 'right' | 'top' | 'bottom';
+        "fill"?: 'default' | 'solid' | 'outline' | 'clear' | undefined;
+        "isChecked"?: boolean;
+        "onValueChanged"?: (event: CustomEvent<boolean>) => void;
         "shape"?: 'default' | 'circle';
         "size"?: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large';
     }
